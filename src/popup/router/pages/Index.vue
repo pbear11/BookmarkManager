@@ -147,14 +147,14 @@ export default {
         </div>
       </div>
       <div class="body-right">
-        <div class="icons">
+        <div class="body-right-menu">
           <i class="icon icon-home" v-if="inHomePage" />
           <i class="icon icon-arrow-left2" v-if="!inHomePage" @click="goBack()"/>
         </div>
-        <div class="icons">
+        <div class="body-right-menu">
           <i class="icon icon-folder-add" @click="openFolderCreation()"/>
         </div>
-        <div class="icons">
+        <div class="body-right-menu">
           <i class="icon icon-note-add" @click="openLinkCreation()"/>
         </div>
       </div>
@@ -265,7 +265,7 @@ p {
     display: flex;
     flex-direction: column;
     align-items: center;
-    .icons {
+    &-menu {
       color: white;
       border-radius: 50%;
       width: 35px;
@@ -279,7 +279,7 @@ p {
         font-size: 25px;
       }
     }
-    .icons:hover {
+    &-menu:hover {
       background-color: white;
       color: #0d4d90;
     }

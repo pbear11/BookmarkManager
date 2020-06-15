@@ -4,13 +4,6 @@
   </div>
 </template>
 
-<script>
-export default {
-  data() {
-    return {};
-  },
-};
-</script>
 <style>
 body {
   margin: 0 !important;
@@ -19,13 +12,14 @@ body {
   font-size: 12px;
   cursor: pointer;
 }
+
 @font-face {
   font-family: 'icomoon';
-  src:  url('https://i.icomoon.io/public/temp/51ece55b79/UntitledProject/icomoon.eot?xn63nf');
-  src:  url('https://i.icomoon.io/public/temp/51ece55b79/UntitledProject/icomoon.eot?xn63nf#iefix') format('embedded-opentype'),
-    url('https://i.icomoon.io/public/temp/51ece55b79/UntitledProject/icomoon.ttf?xn63nf') format('truetype'),
-    url('https://i.icomoon.io/public/temp/51ece55b79/UntitledProject/icomoon.woff?xn63nf') format('woff'),
-    url('https://i.icomoon.io/public/temp/51ece55b79/UntitledProject/icomoon.svg?xn63nf#icomoon') format('svg');
+  src:  url('../assets/icomoon/icomoon.eot?xn63nf');
+  src:  url('../assets/icomoon/icomoon.eot?xn63nf#iefix') format('embedded-opentype'),
+    url('../assets/icomoon/icomoon.ttf?xn63nf') format('truetype'),
+    url('../assets/icomoon/icomoon.woff?xn63nf') format('woff'),
+    url('../assets/icomoon/icomoon.svg?xn63nf#icomoon') format('svg');
   font-weight: normal;
   font-style: normal;
   font-display: block;
