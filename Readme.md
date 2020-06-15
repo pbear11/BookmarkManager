@@ -1,8 +1,6 @@
 # Smart Bookmark Manager
 ---
-I have been using google chrome's bookmark manager a lot because it has syncing functionality which i really like .
-But using Google Chrome's Bookmark manager is usually very slow process since i have a lots of folder and links . 
-Thats why i wanted to create faster and more easily navigated Bookmark manager.
+Just wanted to use it by myself
 
 
 

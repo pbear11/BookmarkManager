@@ -8,6 +8,7 @@
     "128": "icons/icon_128.png"
   },
   "browser_action": {
+    "default_icon": "icons/icon_128.jpg",
     "default_title": "projnote",
     "default_popup": "popup/popup.html"
   },
