@@ -84,7 +84,7 @@ export default {
       var createBookmark = browser.bookmarks.create({
         title: this.inputLinkTitle,
         url: this.inputLinkUrl,
-        parentId: this.routing[this.routing - 1]
+        parentId: this.routing[this.routing.length - 1]
       });
       createBookmark.then(this.getDataById(this.routing[this.routing.length - 1]));
       this.linkModal = false;
