@@ -9,7 +9,7 @@ body {
   margin: 0 !important;
 }
 .icon {
-  font-size: 12px;
+  font-size: 16px;
   cursor: pointer;
 }
 

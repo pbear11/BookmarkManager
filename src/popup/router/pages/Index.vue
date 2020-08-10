@@ -106,6 +106,10 @@ export default {
     },
     cancelLink() {
       this.linkModal = false;
+    },
+    mouseover(index) {
+      console.log(index);
+      this.hover = index;
     }
   },
 };
@@ -118,7 +122,7 @@ export default {
         @click="clickTopBar(array.id, array.title)"
         v-for="array in rootFolders" 
         :key="array.title"
-        :style="{ borderBottom: array.title === topTitle ? '4px solid #000' : 'none'}"
+        :style="{ borderBottom: array.title === topTitle ? '4px solid #00b7c2' : 'none'}"
       >
         {{ array.title }}
       </div>
@@ -131,7 +135,7 @@ export default {
             @click="openFolder(folder.id)" 
             v-for="(folder, index) in displayFolder" 
             :key="folder.title"
-            @mouseover="hover = index"
+            @mouseover="mouseover(index)"
             @mouseleave="hover = 999"
           >
             <i class="icon" :class="{'icon-folder-open-o': hover === index, 'icon-folder-o': hover !== index}"/>
@@ -192,14 +196,16 @@ export default {
 p {
   font-size: 20px;
 }
+
 .main {
   width: 320px;
   height: 550px;
   margin: 0;
+  background-color: rgb(28,30,32);
   .header {
     height: 50px;
     width: 100%;
-    background-color: #8aacc8;
+    background-color: #242628;
     color: black;
     display: flex;
     flex-direction: row;
@@ -211,6 +217,9 @@ p {
       align-items: center;
       box-sizing: border-box;
       cursor: pointer;
+      color: white;
+      padding: 0 10px;
+      text-align: center;
     }
   }
 }
@@ -219,35 +228,49 @@ p {
   overflow: auto;
   font-size: 14px;
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
   &-left {
-    width: 450px;
+    width: 320px;
     height: 100%;
     overflow: auto;
     &-folders {
       display: flex;
       flex-wrap: wrap;
+      margin-right: 10px;
+      margin-left: 10px;
       .subMenu {
-        background-color: #f3f6f9;
-        color: #0d4d90;
+        // background-color: #f3f6f9;
+        background-color: rgb(36,38,40);
+        color: white;
         display: flex;
-        align-items: center;
-        justify-content: space-between;
         height: 50px;
-        width: 95px;
-        margin: 10px;
+        width: 44%;
+        margin: 10px 7px;
         border-radius: 5px;
-        padding: 0 10px;
         cursor: pointer;
         position: relative;
+        box-sizing: border-box;
+        border: 1px solid #00b7c2;
         &-title {
+          position: absolute;
+          display: flex;
+          left: 35px;
+          height: 50px;
+          top: 0;
+          align-items: center;
           width: 80px;
           text-align: center;
+        }
+        .icon-folder-o, .icon-folder-open-o{
+          font-size: 20px;
+          position: absolute;
+          left: 10px;
+          top: 15px;
         }
         .icon-bin {
           position: absolute;
           right: 5px;
-          top: 5px;
+          top: 15px;
         }
       }
       .subMenu:hover {
@@ -260,11 +283,15 @@ p {
     display: none;
   }
   &-right {
-    width: 80px;
-    background-color: #0d4d90;
+    width: 320px;
+    background-color: #242628;
+    border-top: 1px solid #00b7c2;
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
     align-items: center;
+    justify-content: space-between;
+    padding: 0 10px;
+    box-sizing: border-box;
     &-menu {
       color: white;
       border-radius: 50%;
@@ -294,17 +321,14 @@ p {
       flex-direction: row;
       justify-content: space-between;
       align-items: center;
-      border-bottom: 1px solid black;
+      color: white;
       &-text {
         cursor: pointer;
+        margin-right: 10px;
       }
       .icon-bin {
-        color: #0d4d90;
+        color: #00b7c2;
       }
-    }
-    .subList:hover {
-      background-color: #f3f6f9;
-      color:#0d4d90;
     }
   }
 }
